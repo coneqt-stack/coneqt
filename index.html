@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>coneqt</title>
+  <meta name="description" content="Electronic music inspired by the lights of Lisbon." />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="coneqt" />
+  <meta property="og:description" content="Electronic music inspired by the lights of Lisbon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coneqt.art" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="badge">coneqt</div>
+      <h1>Electronic music inspired by the lights of Lisbon</h1>
+      <p class="sub">
+        Minimal presence. Maximum vibe.
+      </p>
+    </header>
+
+    <section class="card" id="bio">
+      <h2>Bio</h2>
+      <p>
+        coneqt makes electronic music inspired by the lights of Lisbon — warm, nocturnal,
+        rhythmic, and connective.
+      </p>
+      <!-- Replace the paragraph above with your final bio whenever you're ready -->
+    </section>
+
+    <section class="card" id="gallery">
+      <h2>Gallery</h2>
+      <p class="muted">Gallery coming soon.</p>
+
+      <!-- Later: drop images into /assets and uncomment this grid
+      <div class="grid">
+        <img src="assets/photo-1.jpg" alt="coneqt" />
+        <img src="assets/photo-2.jpg" alt="coneqt" />
+        <img src="assets/photo-3.jpg" alt="coneqt" />
+        <img src="assets/photo-4.jpg" alt="coneqt" />
+      </div>
+      -->
+    </section>
+
+    <section class="card" id="links">
+      <h2>Links</h2>
+      <div class="links">
+        <a class="link" href="https://coneqt.bandcamp.com" target="_blank" rel="noopener noreferrer">
+          Bandcamp
+        </a>
+        <a class="link" href="https://instagram.com/coneqt.art" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a class="email" href="mailto:hello@coneqt.art">hello@coneqt.art</a>
+      </p>
+      <p class="muted small">
+        (Change this email if you prefer something else.)
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> coneqt</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
