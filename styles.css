@@ -141,11 +141,12 @@ p:last-child{ margin-bottom:0; }
 .email{
   color: var(--text);
   text-decoration: none;
-  transition: opacity .15s ease;
+  transition: color .15s ease, text-shadow .15s ease;
 }
 
 .email:hover{
-  opacity: .75;
+  color: rgba(255,252,240,.98);
+  text-shadow: 0 0 6px rgba(255,220,160,.25);
 }
 
 .grid{
