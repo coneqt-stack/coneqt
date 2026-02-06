@@ -26,12 +26,11 @@ body::before{
   inset: -20%;
   z-index: -1;
   background:
-    radial-gradient(900px 520px at 20% 20%, rgba(255,180,120,.10), transparent 60%),
-    radial-gradient(820px 560px at 80% 30%, rgba(120,160,255,.08), transparent 60%),
-    radial-gradient(900px 620px at 55% 85%, rgba(255,255,255,.05), transparent 65%);
-  filter: blur(18px);
-  transform: translate3d(0,0,0);
-  animation: coneqtGlow 18s ease-in-out infinite alternate;
+    radial-gradient(700px 500px at 20% 20%, rgba(255,180,120,.30), transparent 60%),
+    radial-gradient(700px 500px at 80% 30%, rgba(120,160,255,.24), transparent 60%),
+    radial-gradient(900px 700px at 55% 85%, rgba(255,255,255,.14), transparent 65%);
+  filter: blur(12px);
+  animation: coneqtGlow 8s ease-in-out infinite alternate;
 }
 
 @keyframes coneqtGlow{
