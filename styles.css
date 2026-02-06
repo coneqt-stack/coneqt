@@ -24,14 +24,16 @@ body::before{
   content:"";
   position: fixed;
   inset: -20%;
-  z-index: -1;
+  z-index: 0;              /* changed */
+  pointer-events: none;    /* important */
   background:
     radial-gradient(700px 500px at 20% 20%, rgba(255,180,120,.30), transparent 60%),
     radial-gradient(700px 500px at 80% 30%, rgba(120,160,255,.24), transparent 60%),
     radial-gradient(900px 700px at 55% 85%, rgba(255,255,255,.14), transparent 65%);
   filter: blur(12px);
-  will-change: transform;
+  will-change: transform;  /* added */
   animation: coneqtGlow 8s ease-in-out infinite alternate;
+  transform: translateZ(0); /* added */
 }
 
 @keyframes coneqtGlow{
@@ -46,6 +48,8 @@ body::before{
 }
 
 .wrap{
+  position: relative;  /* added */
+  z-index: 1;          /* added */
   max-width: 860px;
   margin: 0 auto;
   padding: 56px 20px 44px;
