@@ -9,14 +9,40 @@
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.06), transparent 60%),
-              radial-gradient(1000px 700px at 80% 30%, rgba(255,255,255,.05), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  letter-spacing: .2px;
+  background: #0b0b0f;
+  color: rgba(255,255,255,.92);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background layer */
+body::before{
+  content:"";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 20% 20%, rgba(255,180,120,.10), transparent 60%),
+    radial-gradient(820px 560px at 80% 30%, rgba(120,160,255,.08), transparent 60%),
+    radial-gradient(900px 620px at 55% 85%, rgba(255,255,255,.05), transparent 65%);
+  filter: blur(18px);
+  transform: translate3d(0,0,0);
+  animation: coneqtGlow 18s ease-in-out infinite alternate;
+}
+
+@keyframes coneqtGlow{
+  0%   { transform: translate(-2%, -1%) scale(1.02); }
+  50%  { transform: translate( 2%,  1%) scale(1.06); }
+  100% { transform: translate(-1%,  2%) scale(1.03); }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation: none; }
 }
 
 .wrap{
