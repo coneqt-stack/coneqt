@@ -20,26 +20,31 @@ body{
 }
 
 /* Animated background layer */
-body::before{
-  content:"";
+.bg-anim{
   position: fixed;
   inset: -20%;
-  z-index: 0;              /* changed */
-  pointer-events: none;    /* important */
+  z-index: 0;
+  pointer-events: none;
+
   background:
-    radial-gradient(700px 500px at 20% 20%, rgba(255,180,120,.30), transparent 60%),
-    radial-gradient(700px 500px at 80% 30%, rgba(120,160,255,.24), transparent 60%),
-    radial-gradient(900px 700px at 55% 85%, rgba(255,255,255,.14), transparent 65%);
-  filter: blur(12px);
+    radial-gradient(900px 520px at 20% 20%, rgba(255,180,120,.18), transparent 60%),
+    radial-gradient(820px 560px at 80% 30%, rgba(120,160,255,.14), transparent 60%),
+    radial-gradient(900px 620px at 55% 85%, rgba(255,255,255,.10), transparent 65%);
+
+  filter: blur(8px);
+  opacity: 0.95;
+
   will-change: transform;
+  backface-visibility: hidden;
   transform: translateZ(0);
-  animation: coneqtGlow 4s ease-in-out infinite;
+
+  animation: coneqtGlow 18s linear infinite;
 }
 
 @keyframes coneqtGlow{
-  0%   { transform: translate3d(-10%, -8%, 0) scale(1.15) rotate(-2deg); }
-  50%  { transform: translate3d( 10%,  6%, 0) scale(1.25) rotate( 2deg); }
-  100% { transform: translate3d(-6%,  10%, 0) scale(1.18) rotate(-1deg); }
+  0%   { transform: translate3d(-2%, -1%, 0) scale(1.04); }
+  50%  { transform: translate3d( 2%,  1%, 0) scale(1.07); }
+  100% { transform: translate3d(-2%, -1%, 0) scale(1.04); }
 }
 
 /* Respect accessibility preferences */
