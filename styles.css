@@ -27,23 +27,24 @@ body{
   pointer-events: none;
 
   background:
-    radial-gradient(900px 520px at 20% 20%, rgba(255,180,120,.18), transparent 60%),
-    radial-gradient(820px 560px at 80% 30%, rgba(120,160,255,.14), transparent 60%),
-    radial-gradient(900px 620px at 55% 85%, rgba(255,255,255,.10), transparent 65%);
+    radial-gradient(900px 520px at 20% 20%, rgba(255,180,120,.14), transparent 60%),
+    radial-gradient(820px 560px at 80% 30%, rgba(120,160,255,.11), transparent 60%),
+    radial-gradient(900px 620px at 55% 85%, rgba(255,255,255,.08), transparent 65%);
 
-  filter: blur(8px);
+  filter: blur(10px);
   opacity: 0.95;
 
   will-change: transform;
   backface-visibility: hidden;
   transform: translateZ(0);
 
-  animation: coneqtGlow 1s ease-in-out infinite alternate;
+  animation: coneqtGlow 22s linear infinite;
 }
 
-@keyframes coneqtGlow {
-  0%   { transform: translate(-200px, -200px) scale(1); }
-  100% { transform: translate(200px, 200px) scale(1.15); }
+@keyframes coneqtGlow{
+  0%   { transform: translate(-28px, -18px) scale(1.035); }
+  50%  { transform: translate( 28px,  18px) scale(1.065); }
+  100% { transform: translate(-28px, -18px) scale(1.035); }
 }
 
 /* Respect accessibility preferences */
