@@ -31,15 +31,15 @@ body::before{
     radial-gradient(700px 500px at 80% 30%, rgba(120,160,255,.24), transparent 60%),
     radial-gradient(900px 700px at 55% 85%, rgba(255,255,255,.14), transparent 65%);
   filter: blur(12px);
-  will-change: transform;  /* added */
-  animation: coneqtGlow 8s ease-in-out infinite alternate;
-  transform: translateZ(0); /* added */
+  will-change: transform;
+  transform: translateZ(0);
+  animation: coneqtGlow 4s ease-in-out infinite;
 }
 
 @keyframes coneqtGlow{
-  0%   { transform: translate(-2%, -1%) scale(1.02); }
-  50%  { transform: translate( 2%,  1%) scale(1.06); }
-  100% { transform: translate(-1%,  2%) scale(1.03); }
+  0%   { transform: translate3d(-10%, -8%, 0) scale(1.15) rotate(-2deg); }
+  50%  { transform: translate3d( 10%,  6%, 0) scale(1.25) rotate( 2deg); }
+  100% { transform: translate3d(-6%,  10%, 0) scale(1.18) rotate(-1deg); }
 }
 
 /* Respect accessibility preferences */
