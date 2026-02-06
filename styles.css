@@ -38,13 +38,12 @@ body{
   backface-visibility: hidden;
   transform: translateZ(0);
 
-  animation: coneqtGlow 18s linear infinite;
+  animation: coneqtGlow 6s ease-in-out infinite alternate;
 }
 
-@keyframes coneqtGlow{
-  0%   { transform: translate3d(-2%, -1%, 0) scale(1.04); }
-  50%  { transform: translate3d( 2%,  1%, 0) scale(1.07); }
-  100% { transform: translate3d(-2%, -1%, 0) scale(1.04); }
+@keyframes coneqtGlow {
+  0%   { transform: translate(-6%, -6%) scale(1); }
+  100% { transform: translate(6%, 6%) scale(1.15); }
 }
 
 /* Respect accessibility preferences */
